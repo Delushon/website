@@ -11,6 +11,9 @@ const collectionView = document.getElementById("collectionView");
 const menuButton = document.getElementById("menuButton");
 const menu = document.getElementById("menu");
 const darkDiv = document.getElementById("darkDiv");
+const topBar = document.getElementById("topBar");
+const permalinkOverlay = document.getElementById("permalinkOverlay");
+
 
 registrationButton.addEventListener('click', function() {
     registrationDiv.style.display = 'none';
@@ -30,6 +33,7 @@ authButton.addEventListener('click', function() {
 menuButton.addEventListener('click', function() {
     console.log(menu.style.display);
     menu.style.display == "none" ? menu.style.display = "block" : menu.style.display = "none"
+    permalinkOverlay.style.display = menu.style.display
 });
 
 var jsonData = null
@@ -64,14 +68,12 @@ function addPersonToCollection(person) {
     phrase.innerHTML = person.phrase
     phrase.className = "personPhrase"
     personDiv.appendChild(phrase)
-    var timeP = document.createElement("p");
     var time = document.createElement("label");
     time.className = "personTime"
     time.innerHTML = "Опубликовано " + person.timeString
+    var timeP = document.createElement("p");
     timeP.appendChild(time)
     personDiv.appendChild(timeP)
-
-    var bottomP = document.createElement("p");
 
     var like = document.createElement("div");
     like.className = "personLike"
@@ -80,6 +82,7 @@ function addPersonToCollection(person) {
     like.appendChild(likeImg)
     var likeText = document.createElement("label");
     likeText.innerHTML = "Нравится"
+    likeText.className = "personLikeText"
     like.appendChild(likeText)
 
 
@@ -90,14 +93,11 @@ function addPersonToCollection(person) {
     comment.appendChild(commentImg)
     var commentText = document.createElement("label");
     commentText.innerHTML = "Комментарий"
+    commentText.className = "personCommentText"
     comment.appendChild(commentText)
 
-
-
-    bottomP.appendChild(like)
-    bottomP.appendChild(comment)
-
-    personDiv.appendChild(bottomP)
+    personDiv.appendChild(like)
+    personDiv.appendChild(comment)
 
     collectionView.appendChild(personDiv)
 }
