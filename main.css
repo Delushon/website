@@ -110,6 +110,31 @@ button {
     margin: 0 auto;
     background: #97A98F;
     width: 800px;
+    border-radius: 8px;
+}
+
+.personAvatar {
+
+}
+
+.personName {
+
+}
+
+.personPhrase {
+
+}
+
+.personTime {
+
+}
+
+.personLike {
+
+}
+
+.personComment {
+    
 }
 
 .menu {

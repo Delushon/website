@@ -53,16 +53,20 @@ function addPersonToCollection(person) {
     var avatarNameP = document.createElement("div");
     var avatar = document.createElement("img");
     avatar.src = person.avatar
+    avatar.className = "personAvatar"
     avatarNameP.appendChild(avatar)
     var name = document.createElement("label")
     name.innerHTML = person.name
+    name.className = "personName"
     avatarNameP.appendChild(name)
     personDiv.appendChild(avatarNameP)
     var phrase = document.createElement("label");
     phrase.innerHTML = person.phrase
+    phrase.className = "personPhrase"
     personDiv.appendChild(phrase)
     var timeP = document.createElement("p");
     var time = document.createElement("label");
+    time.className = "personTime"
     time.innerHTML = "Опубликовано " + person.timeString
     timeP.appendChild(time)
     personDiv.appendChild(timeP)
@@ -70,6 +74,7 @@ function addPersonToCollection(person) {
     var bottomP = document.createElement("p");
 
     var like = document.createElement("div");
+    like.className = "personLike"
     var likeImg = document.createElement("img");
     likeImg.src = "/res/like.png"
     like.appendChild(likeImg)
@@ -79,6 +84,7 @@ function addPersonToCollection(person) {
 
 
     var comment = document.createElement("div");
+    comment.className = "personComment"
     var commentImg = document.createElement("img");
     commentImg.src = "/res/comment.png"
     comment.appendChild(commentImg)
