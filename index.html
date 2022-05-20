@@ -5,21 +5,80 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple website</title>
+    <title>website</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body class="light-theme">
-    <h1>Task List</h1>
-    <p id="msg">Current tasks:</p>
-    <ul>
-        <li class="list">Add visual styles</li>
-        <li class="list">Add light and dark themes</li>
-        <li>Enable switching the theme</li>
-    </ul>
-    <div>
-        <button id="btn1" class="btn">Dark</button>
+<body>
+
+    <div id="registrationDiv">
+        <h1>Регистрация</h1>
+        <div class="small-div">
+            <p>
+                <input type="text" placeholder="Фамилия">
+            </p>
+            <p>
+                <input type="text" placeholder="Имя">
+            </p>
+            <p>
+                <select name="" id="">
+                    <option selected disabled>Класс</option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                </select>
+            </p>
+            <p>
+                <input type="text" placeholder="Логин">
+            </p>
+            <p>
+                <input type="text" placeholder="Пароль">
+            </p>
+            <button id="registrationButton">Зарегистрироваться</button>
+        </div>
     </div>
+
+    <div id="registrationCompleteDiv" style="display: none">
+        <p>
+            <img src="res/correct.svg" alt="" class="correct-image">
+        </p>
+        <p>
+            <h1>Регистрация выполнена!</h1>
+        </p>
+        <p>
+            <button id="goToSiteButton">Перейти к сайту</button>
+        </p>
+    </div>
+
+    <div id="authDiv" style="display: none;">
+        <h1>Авторизация</h1>
+        <div class="small-div">
+            <p>
+                <input type="text" placeholder="Логин">
+            </p>
+            <p>
+                <input type="text" placeholder="Пароль">
+            </p>
+            <button id="authButton">Войти</button>
+        </div>
+    </div>
+
+    <div class="big-div" id="mainDiv" style="display: none;">
+        <div class="topBar">
+            <img class="circle" src="res/circle.svg" alt="Круг">
+            <img id="menuButton" class="menuButton" src="res/menu.svg" alt="Меню">
+        </div>
+        <div id="collectionView">
+
+        </div>
+    </div>
+
+    <div id="menu" class="menu" style="display: none;">
+        <p>
+            <img src="/res/home.png" alt="">
+        </p>
+    </div>
+
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
 </body>

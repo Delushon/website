@@ -1,45 +1,130 @@
 :root {
-    --green: #00FF00;
+    --green: #97A98F;
+    --grey: #CFD0D4;
+    --brown: #E7CAA8;
+    --lightBrown: #F5E6E1;
+    --red: #723941;
     --white: #FFFFFF;
     --black: #000000;
 }
 
 body {
-    background: var(--bg);
-    color: var(--fontColor);
-    font-family: helvetica;
+    background: var(--red);
+    font-family: 'Roboto';
+    font-style: normal;
+    width: 840px;
+    margin: 0 auto;
 }
 
-li {
-    list-style: circle;
+::placeholder {
+    color: var(--grey);
 }
 
-.list {
-    list-style: square;
+input,
+select {
+    width: 800px;
+    background: var(--green);
+    color: var(--grey);
+    border-radius: 5px;
+    border: 0px;
+    font-size: 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 60px;
 }
 
-.light-theme {
-    --bg: var(--green);
-    --fontColor: var(--black);
-    --btnBg: var(--black);
-    --btnFontColor: var(--white);
+h1 {
+    color: var(--lightBrown);
+    font-size: 64px;
+    text-align: center;
+    font-weight: 400;
 }
 
-.dark-theme {
-    --bg: var(--black);
-    --fontColor: var(--green);
-    --btnBg: var(--white);
-    --btnFontColor: var(--black);
+p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
-.btn {
+.correct-image {
+    width: 372px;
+    height: 372px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background: var(--brown);
+    border: 0px;
+    font-size: 64px;
+}
+
+.small-div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--lightBrown);
+    border-radius: 12px;
+}
+
+.big-div {
+    background: var(--lightBrown);
+    border-radius: 31px;
+}
+
+.topBar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--green);
+    height: 80px;
+    margin-bottom: 60px;
+}
+
+.menuButton {
     position: absolute;
-    top: 20px;
-    left: 250px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
+    width: 70px;
+    height: 70px;
+    right: 10px;
+    top: 5px;
+}
+
+.circle {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 10px;
+    top: 5px;
+}
+
+.personDiv {
+    margin: 0 auto;
+    background: #97A98F;
+    width: 800px;
+}
+
+.menu {
+    position: absolute;
+    top: 90px;
+    right: 350px;
+    width: 200px;
+    height: 400px;
+    background: var(--green);
+    color: var(--black);
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    position: absolute;
+    width: 100%;
 }
